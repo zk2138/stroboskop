@@ -34,6 +34,10 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		var pause = document.querySelector("#start");
+		pause.innerHTML = "Zaženi stroboskop";
+		pause.removeEventListener('click', stop);
+		pause.addEventListener('click', zagon);
 	}
 	
 	var zagon = function(event) {
